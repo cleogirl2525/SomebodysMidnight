@@ -20,7 +20,7 @@
   const midnight = document.querySelector('.midnight')
   const waiting = document.querySelector('.waiting')
 
-  function checkTime () {
+  function checkTime (interval) {
     const time = new Date()
     const hour = time.getHours()
     const mins = time.getMinutes()
@@ -37,8 +37,12 @@
       midnight.style.display = 'none'
       midnight.style.opacity = 0
     }
+
+    if (typeof interval === 'number') { // check every # of miliseconds
+      setTimeout(checkTime, interval, interval)
+    }
   }
 
-  window.addEventListener('DOMContentLoaded', () => checkTime())
+  window.addEventListener('DOMContentLoaded', () => checkTime(1000))
 
 </script>
