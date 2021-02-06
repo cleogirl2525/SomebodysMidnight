@@ -1,0 +1,50 @@
+/* BODY */
+
+body {
+
+}
+
+/* BACKGROUND 
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .falling1 {
+    background-image: url(images/falling.gif);
+    z-index: 1;
+  }
+
+  .falling2 {
+    background-image: url(images/fallingNEW.gif);
+    opacity: 0.75;
+    z-index: 2;
+  }
+
+TEXT / FONTS */
+
+p {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 15px;
+}
+
+h1 {
+    font-family:  'Alegreya', serif;
+    font-size: 15px;
+}
+
+/* MODAL BOXES */
