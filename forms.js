@@ -72,7 +72,7 @@ function countDown () {
   return `${h}:${m}:${s}`
 }
 
-function checkTime (interval) {
+function checkTime (blur) {
   const time = new Date()
   const hour = time.getHours()
   const mins = time.getMinutes()
@@ -80,7 +80,7 @@ function checkTime (interval) {
   if (hour === 0 && mins < wintime) {
     return 'midnight'
   } else if (hour === 0 && mins >= wintime) {
-    const blur = Maths.map(mins, wintime, 60, 0, 3)
+    const blur = Maths.map(mins, wintime, 60, 0, blur)
     return blur
   } else {
     return 'waiting'

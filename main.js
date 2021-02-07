@@ -5,6 +5,7 @@
 const email = 'cleogirl2525@gmail.com'
 const subject = 'DEEP SUBJECT'
 const countdown = document.querySelector('.countdown')
+const blur = 3
 
 const letter = document.querySelector('.letter')
 const first = document.querySelector('.first')
@@ -31,11 +32,11 @@ function draw () {
   setTimeout(draw, 1000 / 30)
 
   if (checkTime() === 'waiting') {
-    letter.style.filter = 'blur(3px)'
+    letter.style.filter = `blur(${blur}px)`
     countdown.textContent = countDown()
   } else {
     if (typeof checkTime() === 'number') {
-      letter.style.filter = `blur(${checkTime()}px)`
+      letter.style.filter = `blur(${checkTime(blur)}px)`
     }
 
     dancingHearts()
