@@ -1,9 +1,5 @@
 /* BODY */
 
-body {
-
-}
-
 /* BACKGROUND */
 * {
     box-sizing: border-box;
@@ -146,13 +142,13 @@ body {
        url('/fonts/anonymous-pro-v14-latin-700italic.svg#AnonymousPro') format('svg'); /* Legacy iOS */
 }
 
-p{
-  'Anonymous Pro', monospace;
+p {
+  "Anonymous Pro", monospace;
 }
 
 
-h1{
-  font-family: 'Alegreya', serif;
+h1 {
+  font-family: "Alegreya", serif;
 }
 
 /* MODAL BOXES */
