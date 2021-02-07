@@ -108,3 +108,125 @@
        url('fonts/anonymous-pro-v14-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('fonts/anonymous-pro-v14-latin-700italic.svg#AnonymousPro') format('svg'); /* Legacy iOS */
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Anonymous Pro', monospace;
+  color: #fff;
+}
+
+.waiting {
+  position: fixed;
+  top: 10vw;
+  width: 100vw;
+  text-align: center;
+  z-index: 20;
+}
+
+.letter {
+  position: fixed;
+  top: 0;
+  /* filter: blur(3px); */
+}
+
+.letter > div {
+  padding: 5vw;
+  font-size: 5.6vw;
+  text-align: justify;
+  line-height: 6vw;
+  /* margin-bottom: 15vh; */
+}
+
+
+.fade-bar {
+  position: fixed;
+  width: 100vw;
+  height: 37vh;
+  z-index: 2;
+}
+
+.fb-top {
+  top: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+}
+
+.fb-bottom {
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+}
+
+img.q {
+  position: fixed;
+  width: 12vw;
+  z-index: 10;
+  cursor: pointer;
+  display: none;
+}
+
+img[alt="question one"] {
+  top: 5vw;
+  right: 5vw;
+}
+
+img[alt="question two"] {
+  top: calc(50vh - 6vw);
+  left: 5vw;
+}
+
+img[alt="question three"] {
+  bottom: 5vw;
+  left: calc(50vw - 6vw);
+}
+
+.modal {
+  width: 80vw;
+  height: calc(100vh - 50vw);
+  position: fixed;
+  top: 12.5vw;
+  left: 10vw;
+  z-index: 20;
+  background: black;
+  border: 1px solid #fff;
+  padding: 5.5vw;
+  font-size: 7vw;
+  color: #fff;
+  font-family: 'Alegreya', serif;
+  display: none;
+}
+
+.submit {
+  position: fixed;
+  top: 12vw;
+  right: 12vw;
+  z-index: 30;
+  font-size: 9vw;
+  display: none;
+  cursor: pointer;
+}
+
+/* BACKGROUND DIVS */
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.falling1 {
+  background-image: url(images/falling.gif);
+  z-index: -2;
+}
+
+.falling2 {
+  background-image: url(images/fallingNEW.gif);
+  opacity: 0.75;
+  z-index: -1;
+}
