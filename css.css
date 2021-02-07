@@ -1,36 +1,3 @@
-/* BODY */
-
-/* BACKGROUND */
-* {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  .bg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-  }
-  .falling1 {
-    background-image: url(images/falling.gif);
-    z-index: 1;
-  }
-  .falling2 {
-    background-image: url(images/fallingNEW.gif);
-    opacity: 0.75;
-    z-index: 2;
-  }
-
-/* TEXT / FONTS */
-
-
-  /* alegreya-500 - latin */
 @font-face {
   font-family: 'Alegreya';
   font-style: normal;
@@ -141,14 +108,3 @@
        url('fonts/anonymous-pro-v14-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('fonts/anonymous-pro-v14-latin-700italic.svg#AnonymousPro') format('svg'); /* Legacy iOS */
 }
-
-p {
-  font-family: "Anonymous Pro", monospace;
-}
-
-
-h1 {
-  font-family: "Alegreya", serif;
-}
-
-/* MODAL BOXES */
