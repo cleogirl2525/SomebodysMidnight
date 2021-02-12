@@ -121,10 +121,10 @@ body {
 }
 
 .waiting {
-  background-color: black;
-  border: 1px solid #ffffff;
   position: fixed;
-  top: 10vw;
+  background-color: rgba(0,0,0,.5);
+  border: 1px solid #ffffff;
+  top: 50vw;
   width: 95vw;
   left: 2.5vw;
   padding: 1vw;
@@ -137,7 +137,7 @@ body {
 }
 .countdown {
   position: fixed;
-  top: 10vw;
+  top: 50vw;
   width: 100vw;
   padding: 4vw;
   text-align: center;
@@ -150,7 +150,7 @@ body {
 .letter {
   position: fixed;
   top: 0;
-  /* filter: blur(3px); */
+  /* filter: blur(4px); */
 }
 
 .letter > div {
@@ -214,7 +214,7 @@ img[alt="question three"] {
   padding: 5.5vw;
   font-size: 7vw;
   color: #fff;
-  font-family: 'Alegreya', serif;
+  font-family: 'Arial', sans-serif;
   display: none;
 }
 

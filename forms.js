@@ -77,11 +77,11 @@ function checkTime (blur) {
   const time = new Date()
   const hour = time.getHours()
   const mins = time.getMinutes()
-  const wintime = 59 // window of time (ex: 60mins after 12)
+  const wintime = 59.9 // window of time (ex: 60mins after 12)
   if (hour === 0 && mins < wintime) {
     return 'midnight'
   } else if (hour === 0 && mins >= wintime) {
-    const blur = Maths.map(mins, wintime, 60, 0, blur)
+    const blur = main.map(mins, wintime, 60, 0, blur)
     return blur
   } else {
   return 'waiting'
