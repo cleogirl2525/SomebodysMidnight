@@ -1,15 +1,16 @@
-/* global dancingHearts, sestina, end, checkTime, countDown */
+/* global dancingHearts, sestina, end, checkTime, countDown, isMobile */
 
 // ...................................................................... setup
 
 const email = 'memories@somebodysmidnight.space'
 const subject = 'FORGETTING 2 REMEMBER / REMEMBERING 2 FORGET'
+const waiting = document.querySelector('.waiting')
 const countdown = document.querySelector('.countdown')
-const blur = 4
+const blur = 13
 
 const letter = document.querySelector('.letter')
 const first = document.querySelector('.first')
-let t = window.innerHeight // 2 - (TAKE THIS OUT BC IT IS A BANDAID AND NOT A FIX)
+let t = window.innerHeight / 2
 const margin = window.innerHeight * 0.6
 letter.style.top = `${t}px`
 
@@ -31,13 +32,16 @@ const heart3 = document.querySelector('[alt="question three"]')
 function draw () {
   setTimeout(draw, 1000 / 30)
 
-  if (checkTime() === 'waiting') {
+  if (checkTime(blur) === 'waiting') {
     letter.style.filter = `blur(${blur}px)`
     countdown.textContent = countDown()
   } else {
-    if (typeof checkTime() === 'number') {
+    waiting.style.display = 'none'
+
+    if (typeof checkTime(blur) === 'number') {
       letter.style.filter = `blur(${checkTime(blur)}px)`
     }
+    // else checkTime() is 'midnight' (ie. between midnight && wintime)
 
     dancingHearts()
 
@@ -85,4 +89,9 @@ submit.addEventListener('click', () => {
   }
 })
 
-window.addEventListener('load', draw)
+window.addEventListener('load', () => {
+  if (isMobile()) draw()
+  else {
+    document.querySelector('.desktop-message').style.display = 'flex'
+  }
+})

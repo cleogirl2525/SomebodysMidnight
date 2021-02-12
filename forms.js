@@ -1,7 +1,6 @@
 /* global Maths */
 let h = 0
 
-
 function dancingHearts () {
   const heart1 = document.querySelector('[alt="question one"]')
   const heart2 = document.querySelector('[alt="question two"]')
@@ -77,14 +76,23 @@ function checkTime (blur) {
   const time = new Date()
   const hour = time.getHours()
   const mins = time.getMinutes()
-  const wintime = 59.9 // window of time (ex: 60mins after 12)
-  if (hour === 0 && mins < wintime) {
+  const starttime = 0 // midnight
+  const startblur = 10 // window of time (ex: 60mins after 12)
+  const endblur = 60
+  if (hour === starttime && mins < startblur) {
     return 'midnight'
-  } else if (hour === 0 && mins >= wintime) {
-    const blur = main.map(mins, wintime, 60, 0, blur)
-    return blur
+  } else if (hour === starttime && mins >= startblur) {
+    return Maths.map(mins, startblur, endblur, 0, blur)
   } else {
-  return 'waiting'
+    return 'waiting'
+  }
+}
+
+function isMobile () {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    return true
+  } else {
+    return false
   }
 }
 
@@ -105,3 +113,4 @@ window.dancingHearts = dancingHearts
 window.end = end
 window.checkTime = checkTime
 window.countDown = countDown
+window.isMobile = isMobile
