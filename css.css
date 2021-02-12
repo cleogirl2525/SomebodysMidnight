@@ -121,9 +121,12 @@ body {
 }
 
 .waiting {
+  background-color: black;
+  border: 1px solid #ffffff;
   position: fixed;
   top: 10vw;
-  width: 100vw;
+  width: 95vw;
+  left: 2.5vw;
   padding: 1vw;
   text-align: center;
   font-family: 'Ariel', sans-serif;
