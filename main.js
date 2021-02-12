@@ -9,7 +9,7 @@ const blur = 4
 
 const letter = document.querySelector('.letter')
 const first = document.querySelector('.first')
-let t = window.innerHeight / 2
+let t = window.innerHeight // 2 - (TAKE THIS OUT BC IT IS A BANDAID AND NOT A FIX)
 const margin = window.innerHeight * 0.6
 letter.style.top = `${t}px`
 
