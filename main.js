@@ -3,7 +3,7 @@
 // ...................................................................... setup
 
 const email = 'cleogirl2525@gmail.com'
-const subject = 'DEEP SUBJECT'
+const subject = 'FORGETTING 2 REMEMBER / REMEMBERING 2 FORGET'
 const countdown = document.querySelector('.countdown')
 const blur = 3
 
@@ -15,9 +15,9 @@ letter.style.top = `${t}px`
 
 const answers = []
 const questions = [
-  'this is the first question?',
-  'this is the second question?',
-  'this is the third question?'
+  'In three words, describe how it felt to holding hands with your favorite lover.',
+  'What is the name of the place you go to forget? Be specific.',
+  'Name the place you look first when you lose something.'
 ]
 
 const submit = document.querySelector('.submit')
@@ -80,7 +80,7 @@ submit.addEventListener('click', () => {
   answers.push(v)
   modal.value = ''
   if (answers.length === 3) {
-    const body = `Hello ${answers[0]}, and ${answers[1]} then ${answers[2]}!!!`
+    const body = `Hello, I am writing to tell you that I loved you once and that you still make me feel ${answers[0]}. Did you know that inside my stomach I could sail a ship? It docks in the ${answers[1]} and drifts until I find it in the ${answers[2]}. I know we're both busy and it's been so long but I hope we see us sooner than what's been our never.`
     end(email, subject, body)
   }
 })

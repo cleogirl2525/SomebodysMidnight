@@ -124,7 +124,23 @@ body {
   position: fixed;
   top: 10vw;
   width: 100vw;
+  padding: 1vw;
   text-align: center;
+  font-family: 'Ariel', sans-serif;
+  font-size: 3.7vw;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px #ff1DCE;
+  z-index: 20;
+}
+.countdown {
+  position: fixed;
+  top: 10vw;
+  width: 100vw;
+  padding: 1vw;
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 4vw;
+  text-shadow: 2px 2px 8px #ff1DCE;
   z-index: 20;
 }
 
