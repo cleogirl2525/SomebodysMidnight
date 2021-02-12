@@ -2,10 +2,10 @@
 
 // ...................................................................... setup
 
-const email = 'cleogirl2525@gmail.com'
+const email = 'memories@somebodysmidnight.space'
 const subject = 'FORGETTING 2 REMEMBER / REMEMBERING 2 FORGET'
 const countdown = document.querySelector('.countdown')
-const blur = 3
+const blur = 4
 
 const letter = document.querySelector('.letter')
 const first = document.querySelector('.first')

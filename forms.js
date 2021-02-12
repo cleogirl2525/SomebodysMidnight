@@ -1,6 +1,7 @@
 /* global Maths */
 let h = 0
 
+
 function dancingHearts () {
   const heart1 = document.querySelector('[alt="question one"]')
   const heart2 = document.querySelector('[alt="question two"]')
@@ -76,14 +77,14 @@ function checkTime (blur) {
   const time = new Date()
   const hour = time.getHours()
   const mins = time.getMinutes()
-  const wintime = 10 // window of time (ex: 10mins after 12)
+  const wintime = 59 // window of time (ex: 60mins after 12)
   if (hour === 0 && mins < wintime) {
     return 'midnight'
   } else if (hour === 0 && mins >= wintime) {
     const blur = Maths.map(mins, wintime, 60, 0, blur)
     return blur
   } else {
-    return 'waiting'
+  return 'waiting'
   }
 }
 
