@@ -76,7 +76,7 @@ function checkTime (blur) {
   const time = new Date()
   const hour = time.getHours()
   const mins = time.getMinutes()
-  const starttime = 21 // midnight
+  const starttime = 0 // midnight
   const startblur = 10 // window of time (ex: 60mins after 12)
   const endblur = 60
   if (hour === starttime && mins < startblur) {
