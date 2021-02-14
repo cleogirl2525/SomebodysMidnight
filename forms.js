@@ -64,7 +64,7 @@ function sestina (letter) {
 
 function countDown () {
   let h = String(23 - new Date().getHours())
-  let m = String(60 - new Date().getMinutes())
+  let m = String(60 - new Date().getMinutes()) - 1
   let s = String(60 - new Date().getSeconds())
   if (h.length === 1) h = '0' + h
   if (m.length === 1) m = '0' + m
@@ -76,7 +76,7 @@ function checkTime (blur) {
   const time = new Date()
   const hour = time.getHours()
   const mins = time.getMinutes()
-  const starttime = 0 // midnight
+  const starttime = 21 // midnight
   const startblur = 10 // window of time (ex: 60mins after 12)
   const endblur = 60
   if (hour === starttime && mins < startblur) {

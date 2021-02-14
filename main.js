@@ -40,12 +40,13 @@ function draw () {
 
     if (typeof checkTime(blur) === 'number') {
       letter.style.filter = `blur(${checkTime(blur)}px)`
+    } else { // checkTime() is 'midnight' (ie. between midnight && wintime)
+      letter.style.filter = 'blur(0px)'
     }
-    // else checkTime() is 'midnight' (ie. between midnight && wintime)
 
     dancingHearts()
 
-    t -= 0.75 // speed
+    t -= 1.5 // speed
     letter.style.top = `${t}px`
 
     if (-t >= letter.offsetHeight * 0.2625 && heart1.parentElement) {
@@ -79,6 +80,11 @@ document.querySelectorAll('.q').forEach(heart => {
 
 submit.addEventListener('click', () => {
   const v = modal.value
+  if (v === '') {
+    const notice = ' (enter your response before closing)'
+    modal.setAttribute('placeholder', questions[answers.length] + notice)
+    return
+  }
   modal.style.display = 'none'
   submit.style.display = 'none'
   answers.push(v)
